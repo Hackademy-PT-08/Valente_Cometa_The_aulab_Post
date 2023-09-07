@@ -31,19 +31,24 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        Auth::user()->articles()->create(
+        $img_id= uniqid();
+        $imagename = 'img-articolo'. $img_id.'.'.'jpg';
+        Article::create(
 
              [
                 'title'=>$request->input('title'),
                 'description'=>$request->input('description'),
                 'body'=>$request->input('body'),
-                'img'=>$request->file('img')->store("public/img"),
+                'img'=>$imagename,
+                'user_id'=>auth()->user()->id,
                 'category_id'=>$request->input('category_id'),
 
              ]
 
             );
+            $image = $request->file('immagine')->storeAs("public",$imagename);
             return redirect()->route('home')->with("message", "Articolo creato correttamente");
+
     }
 
 
@@ -52,7 +57,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('articles.show', compact('article'));
     }
 
     /**
@@ -78,4 +83,11 @@ class ArticleController extends Controller
     {
         //
     }
+
+    public function articles_by_category(Category $category){
+        $articles= Article::where('category_id', $category->id)->orderBy('created_at','DESC')->get();
+
+        return view('article.category', compact('articles','category'));
+    }
+
 }

@@ -20,14 +20,14 @@
 </li>
 
 <li class="nav-item">
-<a class="dropdown-item" href="{{route ('logout')}}"
-onclick="event.preventDefautl(); document.getElementById('form-logout').submit();">Logout</a>
 
-<form method="POST" action="{{route('logout')}}" style="display-none" id="form-logout">
+
+<form method="POST" action="{{route('logout')}}" style="" id="form-logout">
 @csrf
+<input type="submit" value="logout">
 </form>
 
- </a>
+ 
 
 </li>
 @endauth
