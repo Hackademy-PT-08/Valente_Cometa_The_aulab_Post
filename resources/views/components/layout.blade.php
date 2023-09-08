@@ -13,7 +13,6 @@
     <h1 class="mx-4">THE AULAB POST</h1>
     <x-header />
 
-    
    {{$slot}} 
 </body>
 </html>

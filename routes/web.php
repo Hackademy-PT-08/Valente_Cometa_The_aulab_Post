@@ -20,3 +20,4 @@ Route::get('/articles/create', [ArticleController::class, 'create'])->name ('art
 Route::post('/article/store', [ArticleController::class,'store'])->name('articles.store');
 Route::get('/articles/{article}/show',[ArticleController::class,'show'])->name('articles.show');
 Route::get('/articles/{category}/index',[ArticleController::class,'articlesForCategory'])->name('articles.category');
+

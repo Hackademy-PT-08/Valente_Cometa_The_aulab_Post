@@ -7,7 +7,7 @@
     <a class="nav-link btn btn-danger" href="{{ route('login')}}">Login</a>
 </li>
 
-<li class="nav-item mx-3">
+<li class="nav-item">
     <a class="nav-link btn btn-warning" href="{{ route('articles.create')}}">Pubblica articolo</a>
 </li>
 
@@ -21,10 +21,10 @@
 
 <li class="nav-item">
 
-
-<form method="POST" action="{{route('logout')}}" style="" id="form-logout">
-@csrf
+<form method="POST" action="{{route('logout')}}" style="display-none" id="form-logout">
 <input type="submit" value="logout">
+
+@csrf
 </form>
 
  

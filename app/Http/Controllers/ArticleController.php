@@ -90,4 +90,9 @@ class ArticleController extends Controller
         return view('article.category', compact('articles','category'));
     }
 
+    
+
+
+
+
 }
