@@ -47,7 +47,7 @@ class ArticleController extends Controller
 
             );
             $image = $request->file('immagine')->storeAs("public",$imagename);
-            return redirect()->route('home')->with("message", "Articolo creato correttamente");
+            return redirect()->route('home')->with("message", "Articolo caricato correttamente");
 
     }
 
