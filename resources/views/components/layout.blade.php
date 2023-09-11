@@ -9,11 +9,14 @@
 <body>
     
     <x-navbar />
-    <br>
-    <h1 class="mx-4">THE AULAB POST</h1>
+    
+    
     <x-header />
-
+<div class="container">
    {{$slot}} 
+</div>
+
+
 </body>
 </html>
 
