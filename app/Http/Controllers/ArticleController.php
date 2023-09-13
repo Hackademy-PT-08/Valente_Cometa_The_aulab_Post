@@ -47,7 +47,8 @@ class ArticleController extends Controller
 
             );
             $image = $request->file('immagine')->storeAs("public",$imagename);
-            return redirect()->route('home')->with("message", "Articolo caricato correttamente");
+
+            return redirect()->route('home')->with("success", "Articolo caricato correttamente");
 
     }
 
@@ -85,7 +86,7 @@ class ArticleController extends Controller
     }
 
     public function articles_by_category(Category $category){
-        $articles= Article::where('category_id', $category->id)->orderBy('created_at','DESC')->get();
+        $articles= Article::where('category_id', $category->id)->where('is_accepted',true)->orderBy('created_at','DESC')->get();
 
         return view('article.category', compact('articles','category'));
     }

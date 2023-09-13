@@ -9,12 +9,7 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home page</a>
         </li>
-        
-        
-           
           </a>
-         
-        
         @auth
         <li class="nav-item">
           <a class="nav-link" href="{{route('articles.create')}}">Pubblica articolo</a>
@@ -24,10 +19,17 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
           </a>
-          <ul class="dropdown-menu">
+          
+          <ul class="dropdown-menu" style="">
             <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            @auth
+            <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Area personale</a></li>
+            @endauth
+              
+            <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Area revisore</a></li>
+            
+             
+            
           </ul>
       </ul>
       
@@ -56,4 +58,8 @@
         
     </div>
   </div>
+
+
+
+  
 </nav>

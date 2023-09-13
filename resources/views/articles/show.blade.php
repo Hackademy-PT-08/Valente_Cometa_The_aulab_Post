@@ -12,7 +12,7 @@
             <p>{{$article->body}}</p>
             <a href="{{route('articles.category', $article->category)}}" class="card-text">{{$article->category->name}}</a>
             <p> Pubblicato da : {{$article->user->name}}</p>
-            <p> Pubblicato il : {{$article->created_at->format('d/m/y')}}</p>
+            <p> Pubblicato il : {{$article->created_at->format('y/m/d')}}</p>
         </div>
     </div>        
 </div>

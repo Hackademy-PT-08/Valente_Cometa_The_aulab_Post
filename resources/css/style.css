@@ -2,3 +2,7 @@ body {
     background: rgb(247,247,247);
 background: linear-gradient(0deg, rgba(247,247,247,1) 58%, rgba(13,110,253,1) 92%) no-repeat;
 }
+
+h1{
+    color: red;
+}

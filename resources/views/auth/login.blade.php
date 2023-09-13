@@ -13,6 +13,7 @@
         </div>
         </div>
     </div>
+
         
     <div class="row mx-5">
         <div class="col-4">
@@ -31,7 +32,7 @@
         
 
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary mx-5">Submit</button>
 
 
     </form>

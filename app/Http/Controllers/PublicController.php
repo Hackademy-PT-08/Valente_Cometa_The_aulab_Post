@@ -13,8 +13,11 @@ class PublicController extends Controller
     public function home()
 
     {
-        $articles = Article::orderBy('created_at','desc')->take(6)->get();
-        return view ('home',compact('articles'));
+       
+    
+        $articles = Article::where('is_accepted', false )->orderBy('created_at','desc')->take(6)->get();
+        return view('home', compact('articles'));
+        
         
     }
 
@@ -49,6 +52,8 @@ class PublicController extends Controller
 
         
     }
+
+   
 
 }
 
