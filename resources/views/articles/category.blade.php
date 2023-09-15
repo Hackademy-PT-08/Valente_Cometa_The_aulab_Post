@@ -5,7 +5,7 @@
         <img src="{{Storage::url($image->url)}}" class="card-img-top" alt="{{$article->title}}">
         <div class="card-body">
             <h5 class="card-title">{{$article->title}}</h5>
-            <p class="card-text">{{{substr($article->description,0,20)}}</p>
+            <p class="card-text">{{substr($article->description,0,20)}}</p>
             <a href="{{route('articles.show',$article)}}" class="btn btn primary">Leggi</a>
         </div>
     </div>

@@ -9,10 +9,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-6">
+            
             
             <x-form/>
-        </div>    
+        </div>   
+        <div class="col-6">
+            <img src="{{asset('/immagini/8.jpg')}}" alt="" style="height:70vh">
+        </div> 
     </div>
 </div>
 

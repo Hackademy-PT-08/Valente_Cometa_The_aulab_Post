@@ -22,9 +22,16 @@
 </div>
 @else 
 
-<div class="alert alert-success my-5 text-center">
-Non sei autorizzato, solo i revisori possono accedere.
+<div class="contaniner">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="alert alert-danger text-center" style="margin-top:40vh">
+            Non sei autorizzato, solo i revisori possono accedere.
+        </div>
+        </div>
     </div>
+</div>
+
 @endif
 
 
