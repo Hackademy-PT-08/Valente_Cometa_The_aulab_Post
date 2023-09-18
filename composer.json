@@ -10,7 +10,10 @@
         "laravel/fortify": "^1.17",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
+        "laravel/scout": "^10.3",
         "laravel/tinker": "^2.8",
+        "teamtnt/laravel-scout-tntsearch-driver": "^13.2",
+        "teamtnt/tntsearch": "^4.2",
         "twbs/bootstrap-icons": "^1.11"
     },
     "require-dev": {

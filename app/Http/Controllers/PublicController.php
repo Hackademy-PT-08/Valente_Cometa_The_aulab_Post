@@ -15,7 +15,7 @@ class PublicController extends Controller
     {
        
     
-        $articles = Article::where('is_accepted', false )->orderBy('created_at','desc')->take(6)->get();
+        $articles = Article::where('is_accepted', true )->orderBy('created_at','desc')->take(6)->get();
         return view('home', compact('articles'));
         
         
@@ -53,7 +53,13 @@ class PublicController extends Controller
         
     }
 
-   
+   public function searchArticle(Request $request)
+   {
+    $key=$request->input('key');
+    $articles=Article::search($key)->where('is_accepted', true)->get();
+    return view('articles.index', compact('articles','key'));
+
+   }
 
 }
 

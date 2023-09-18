@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container ">
     <div class="row">
         <div class="col-6">
             
@@ -15,10 +15,12 @@
             <x-form/>
         </div>   
         <div class="col-6">
-            <img src="{{asset('/immagini/8.jpg')}}" alt="" style="height:70vh">
+            <img src="{{asset('/immagini/8.png')}}" alt="" style="height:60vh">
         </div> 
     </div>
 </div>
+<br>
+<br>
 
 </x-layout>
 

@@ -5,23 +5,23 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         
-        <li class="nav-item">
+        <li class="nav-item ">
           
-          <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home page</a>
+          <a class="nav-link active" aria-current="page" href="{{route('home')}}"><i class="bi bi-house-door-fill"> Home</i></a>
         </li>
         
           </a>
         @auth
         <li class="nav-item">
-          <a class="nav-link" href="{{route('articles.create')}}">Pubblica articolo <i class="bi bi-0-square-fill"></i></a>
+          <a class="nav-link" href="{{route('articles.create')}}"><i class="bi bi-pencil-fill"></i> Pubblica articolo</a>
           
         </li>
         @endauth
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+          <a class="nav-link dropdown-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-menu-button-wide-fill "></i>
           </a>
           
           <ul class="dropdown-menu" style="">
@@ -31,12 +31,17 @@
             @endauth
               
             <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Area revisore</a></li>
+
             
              
             
           </ul>
       </ul>
-      
+      <form action="{{route('search.articles')}}" method="get" class="d-flex mx-5">
+<input type="text" name="key" class="form-control me-2" placeholder="Cerca">
+<button class="btn btn-outline-dark btn-floating " type="submit">Cerca</button>
+
+</form>
       @guest
         <a href="{{route('register')}}" class="btn btn-outline-dark mx-5">Registrati</a>
         <a href="{{route('login')}}" class="btn btn-outline-dark mx-5">Login</a>
