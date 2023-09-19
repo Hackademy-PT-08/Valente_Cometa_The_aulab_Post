@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,10 +16,10 @@ class AdminController extends Controller
         $adminList = User::where('is_admin','!=', NULL)->get();
         $writerList = User::where('is_writer','!=', NULL)->get();
         $revisorList = User::where('is_revisor','!=', NULL)->get();
+        $tags = Tag::all();
 
 
-
-        return view('admin.dashboard', compact('adminRequests','revisorRequests','writerRequests','adminList','revisorList','writerList'));
+        return view('admin.dashboard', compact('adminRequests','revisorRequests','writerRequests','adminList','revisorList','writerList','tags'));
 
 
 
@@ -64,5 +65,8 @@ class AdminController extends Controller
         return redirect()->route('admin.dashboard');
 
     }
+    
+   
+    
     
 }

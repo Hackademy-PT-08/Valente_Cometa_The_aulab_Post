@@ -23,8 +23,17 @@
             <p > Pubblicato da : {{$article->user->name}}</p>
             <p > Pubblicato il : {{$article->created_at->format('y/m/d')}}</p>
             
-            <span class="badge rounded-pill bg-info"><a href="{{route('articles.category', $article->category)}}" class=" card-text " style="text-decoration:none; color:black">{{$article->category->name}}</a></span>
+            <span class="badge rounded-pill bg-danger mb-5"><a href="{{route('articles.category', $article->category)}}" class=" card-text " style="text-decoration:none; color:black">{{$article->category->name}}</a></span>
+
+            
         </div>
     </div>        
+</div>
+
+<div class="d-flex">
+    <p class="h5"> Tag : </p>
+    @foreach ($article->tags as $tag)
+    <span> #{{$tag->name}}</span>
+    @endforeach
 </div>
 </x-layout>

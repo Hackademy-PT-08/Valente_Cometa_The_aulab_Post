@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Tag;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -21,8 +22,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        
-            return view('articles.create');
+            $tags = Tag::all();
+            return view('articles.create', compact('tags'));
         
     }
 
@@ -33,7 +34,7 @@ class ArticleController extends Controller
     {
         $img_id= uniqid();
         $imagename = 'img-articolo'. $img_id.'.'.'jpg';
-        Article::create(
+        $article=Article::create(
 
              [
                 'title'=>$request->input('title'),
@@ -46,10 +47,16 @@ class ArticleController extends Controller
              ]
 
             );
+            
             $image = $request->file('immagine')->storeAs("public",$imagename);
+            $selectedTags = $request->input('tags');
+            foreach ($selectedTags as $tagId){
+                $article->tags()->attach($tagId);
+            }
+            
 
-            return redirect()->route('home')->with("success", "Articolo caricato correttamente");
-
+            
+                return redirect()->route('home')->with("success", "Articolo caricato correttamente");
     }
 
 

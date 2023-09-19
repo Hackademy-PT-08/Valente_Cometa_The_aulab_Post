@@ -52,8 +52,8 @@
 
 </form>
         </div>
-        <div class="col-6 my-5">
-    <img src="{{asset('/immagini/l.jpg')}}" alt="" style="height:50vh" class="login">
+        <div class="col-6 ">
+    <img src="{{asset('/immagini/caffe.png')}}" alt="" style="height:80vh " class="login">
     </div>
     </div>
 

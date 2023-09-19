@@ -1,7 +1,7 @@
  
 
 <!-- Footer -->
-<footer class="bg-dark text-center text-white">
+<footer class="bg-dark text-center text-warning">
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Social media -->
@@ -49,16 +49,7 @@
         <!--Grid row-->
       </form>
     </section>
-    <!-- Section: Form -->
-
-    <!-- Section: Text -->
     
-
-    <!-- Section: Links -->
-    
-      
-        
-
         
 
         
@@ -68,13 +59,12 @@
     
    
   </div>
-  <!-- Grid container -->
+
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
+    © 2023 Copyright:
    
   </div>
-  <!-- Copyright -->
+
 </footer>
-<!-- Footer -->
