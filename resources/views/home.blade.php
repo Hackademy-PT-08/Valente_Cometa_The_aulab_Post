@@ -15,6 +15,9 @@
             </header>
         </div>
     </div>
+   
+
+   
     <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6">
@@ -41,9 +44,5 @@
             <img src="{{asset('/immagini/0.png')}}" alt="" id="g">
         </div>
     </div>
-
-
-
-
-
+    
 </x-layout>

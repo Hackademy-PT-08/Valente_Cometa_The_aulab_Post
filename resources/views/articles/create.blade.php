@@ -12,7 +12,7 @@
         <div class="col-6">
             
             
-            <x-form/>
+            <x-form :tags=$tags/>
         </div>   
         <div class="col-6">
             <img src="{{asset('/immagini/8.png')}}" alt="" style="height:60vh">

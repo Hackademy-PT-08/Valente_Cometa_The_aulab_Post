@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,9 +18,10 @@ class AdminController extends Controller
         $writerList = User::where('is_writer','!=', NULL)->get();
         $revisorList = User::where('is_revisor','!=', NULL)->get();
         $tags = Tag::all();
+        $categories = Category::all();
 
 
-        return view('admin.dashboard', compact('adminRequests','revisorRequests','writerRequests','adminList','revisorList','writerList','tags'));
+        return view('admin.dashboard', compact('adminRequests','revisorRequests','writerRequests','adminList','revisorList','writerList','tags','categories'));
 
 
 
@@ -65,8 +67,59 @@ class AdminController extends Controller
         return redirect()->route('admin.dashboard');
 
     }
+
+    public function editTag(Request $request, Tag $tag){
+        $tag->update(
+            [
+                'name'=>$request->input('name')
+            ]
+            );
+            return redirect()->route('admin.dashboard');
+    }
+
+
     
-   
+   public function deleteTag(Tag $tag){
+
+        $tag->delete();
+        return redirect()->route('admin.dashboard');
+
+
+   }
+
+   public function storeTag(Request $request)
+   {
+    Tag::create(['name'=> $request->input('name')]);
+
+    return redirect ()->route('admin.dashboard');
+   }
+
+   public function editCategory(Request $request, Category $category)
+   {
+    $category->update(
+        [
+            'name'=>$request->input('name')
+        ]
+        );
+
+    return redirect ()->route('admin.dashboard');
+   }
+
+   public function deleteCategory(Category $category)
+   {
+    $category->delete();
+
+    return redirect ()->route('admin.dashboard');
+   }
+
+   public function storeCategory(Request $request)
+
+   {
+    Category::create (['name'=> $request->input('name')]);
+    return redirect ()->route('admin.dashboard');
+   }
+
+
     
     
 }

@@ -24,6 +24,7 @@ Route::get('/articles/{article}/show',[ArticleController::class,'show'])->name('
 Route::get('/articles/{category}/index',[ArticleController::class,'articlesForCategory'])->name('articles.category');
 Route::get('/work-with-as', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request',[PublicController::class,'sendRoleRequest'])->name('user.role.request');
+
 route::middleware('admin')->group(function(){
 Route::get('/admin/dashboard', [AdminController::class,'dashboard'])->name('admin.dashboard');
 Route::get('/admin/{user}/set-revisor',[AdminController::class,'makeUserRevisor'])->name('admin.makeUserRevisor');
@@ -32,6 +33,13 @@ Route::get('/admin/{user}/set-writer',[AdminController::class,'makeUserWriter'])
 Route::get('/admin/{user}/remove-admin',[AdminController::class,'removeUserAdmin'])->name('admin.remove');
 Route::get('/admin/{user}/remove-revisor',[AdminController::class,'removeUserRevisor'])->name('revisor.remove');
 Route::get('/admin/{user}/remove-writer',[AdminController::class,'removeUserWriter'])->name('writer.remove');
+Route::post('/tag/{tag}/update',[AdminController::class,'editTag'])->name('tag.edit');
+Route::delete('/tag/{tag}/delete',[AdminController::class,'deleteTag'])->name('tag.delete');
+Route::post('/tag/{tag}/delete',[AdminController::class,'deleteTag'])->name('tag.delete');
+Route::post('/tag/store',[AdminController::class,'storeTag'])->name('tag.store');
+Route::post('/category/{category}/update',[AdminController::class,'editCategory'])->name('category.edit');
+Route::delete('/category/{category}/delete',[AdminController::class,'deleteCategory'])->name('category.delete');
+Route::post('/category/store',[AdminController::class,'storeCategory'])->name('category.store');
 });
 
 
@@ -49,4 +57,15 @@ Route::middleware('revisor')->group(function(){
 });
 
 Route::get('/article/search', [PublicController::class, 'searchArticle'])->name('search.articles');
+
+
+
+
+
+
+
+
+
+
+
 
