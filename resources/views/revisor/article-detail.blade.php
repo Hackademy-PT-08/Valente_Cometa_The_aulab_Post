@@ -16,8 +16,8 @@
                 <h3 class="my-3"> <span class="h5">Categoria : </span>{{$article->category->name}}</h3>
                 <h3 class="my-3"> <span class="h5">Creato: </span>{{$article->created_at->diffForHumans()}}</h3>
                 <div class="d-flex">
-                    <a href="{{route('revisor.accept', $article)}}" class="btn btn-success mx-5">Accetta</a>
-                    <a href="{{route('revisor.reject', $article)}}" class="btn btn-danger mx-5">Rifiuta</a>
+                    <a href="{{route('revisor.accept', $article)}}" class="btn btn-dark mx-5" style="color:yellow">Accetta</a>
+                    <a href="{{route('revisor.reject', $article)}}" class="btn btn-dark mx-5" style="color:yellow">Rifiuta</a>
                 </div>
         </div>
     </div>

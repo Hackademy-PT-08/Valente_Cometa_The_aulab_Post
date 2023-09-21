@@ -46,7 +46,13 @@ Route::post('/category/store',[AdminController::class,'storeCategory'])->name('c
 
 route::middleware('writer')->group(function(){
 Route::get('/article/create', [ArticleController::class,'create'])->name('article.create');
-Route::get('/article/store',[ArticleController::class,'store'])->name('article.store');
+Route::post('/article/store',[ArticleController::class,'store'])->name('article.store');
+Route::get('/article/dashboard', [ArticleController::class,'articleDashboard'])->name('article.dashboard');
+Route::get('/article/{article}/edit', [ArticleController::class,'edit'])->name('article.edit');
+Route::put('/article/{article}/update', [ArticleController::class,'update'])->name('article.update');
+Route::delete('/article/{article}/delete', [ArticleController::class,'destroy'])->name('article.delete');
+
+
 });
 
 Route::middleware('revisor')->group(function(){

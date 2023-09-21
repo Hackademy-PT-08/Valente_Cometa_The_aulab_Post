@@ -73,7 +73,8 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        $tags = Tag::all();
+        return view('articles.edit',compact('article','tags'));
     }
 
     /**
@@ -81,7 +82,32 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        if($request->has('img')){
+            $article->update(
+                [
+                    'title'=>$request->input('title'),
+                    'description'=>$request->input('description'),
+                    'body'=>$request->input('body'),
+                    'img'=>$request->file('img')->store("public/img"),
+                    'category_id'=>$request->input('cetegory_id'),
+                ]
+          
+            );
+        }else{
+
+            $article->update(
+                [
+                    'title'=>$request->input('title'),
+                    'description'=>$request->input('description'),
+                    'body'=>$request->input('body'),
+                    'category_id'=>$request->input('cetegory_id'),
+                ]
+
+            );               
+        } 
+        $article->tags()->detach();
+        $article->tags()->sync($request->input('tags'));
+        return redirect()->route('article.dashboard');
     }
 
     /**
@@ -89,13 +115,19 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->delete();
+        return redirect()->route('article.dashboard');
     }
 
     public function articles_by_category(Category $category){
-        $articles= Article::where('category_id', $category->id)->where('is_accepted',true)->orderBy('created_at','DESC')->get();
+        $article= Article::where('category_id', $category->id)->where('is_accepted',true)->orderBy('created_at','DESC')->get();
 
         return view('article.category', compact('articles','category'));
+    }
+
+    public function articleDashboard()
+    {
+        return view('articles.dashboard');
     }
 
     

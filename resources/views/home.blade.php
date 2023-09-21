@@ -3,27 +3,31 @@
 
 
 
-    @if (session()->has('success'))
-    <div class="alert alert-success">
+    
+        <div class="col-12">
+            <header>
+                <img src="{{asset('/immagini/1.png')}}" alt="" class="banner">
+            </header>
+        </div>
+    
+   
+
+   <div class="container my-5">
+    <div class="row">
+        <div class="col-6 offset-3">
+        @if (session()->has('success'))
+    <div class="alert alert-success mx-5 text-center">
         {{session('success')}}
     </div>
     @endif
-    <div class="row">
-        <div class="col-12">
-            <header>
-                <h1 class="giallo">ULTIMI ARTICOLI INSERITI</h1>
-            </header>
         </div>
     </div>
-   
-
-   
-    <div class="row">
-
-        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6">
+   </div>
+    <div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 ">
             <div class="row my-4">
                 @foreach($articles as $article)
-                <div class="col-4 text-center ">
+                <div class="col-4 text-center mb-4">
                     <div class="card ">
                         <img src="{{asset('storage/'.$article->img)}}" class="card-img-top" alt="{{$article->title}}">
                         <div class="card-body bg-dark">

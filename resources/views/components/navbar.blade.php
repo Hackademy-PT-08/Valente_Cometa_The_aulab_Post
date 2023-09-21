@@ -30,16 +30,15 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
           <i class="bi bi-menu-button-wide-fill "> Utilities</i>
           </a>
-          
-          <ul class="dropdown-menu btn btn-dark" style="">
+          <ul class="dropdown-menu btn btn-dark" >
             <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
             @auth
             <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Area personale</a></li>
-            @endauth
-              
             <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Area revisore</a></li>
-
-            
+            @endauth
+            @if(Auth::user() && Auth::user()->is_writer)
+            <li><a class="nav-link" href="{{route('article.dashboard')}}">Area Autore</a></li>
+            @endif
              
             
           </ul>

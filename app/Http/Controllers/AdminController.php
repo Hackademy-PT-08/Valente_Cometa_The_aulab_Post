@@ -71,7 +71,7 @@ class AdminController extends Controller
     public function editTag(Request $request, Tag $tag){
         $tag->update(
             [
-                'name'=>$request->input('name')
+                'name'=> $request->input('name')
             ]
             );
             return redirect()->route('admin.dashboard');

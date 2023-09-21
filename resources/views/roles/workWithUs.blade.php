@@ -46,7 +46,7 @@
                         <textarea name="presentation" class="form-control" id="" cols="30" rows="10"></textarea>
                     </div>
 
-                    <button class="btn btn-primary" type="submit">Invia la tua candidatura</button>
+                    <button class="btn btn-dark" style="color:yellow" type="submit">Invia la tua candidatura</button>
 
                 </form>
 

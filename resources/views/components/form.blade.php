@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('articles.store')}}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('article.store')}}" enctype="multipart/form-data">
     @csrf
 
     <div class="mb-3">
@@ -29,7 +29,7 @@
         <textarea name="body" id="" cols="30" rows="10" class="form-control">
         </textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-dark" style="color:yellow">Submit</button>
 
     <div class="mb-3">
         <label class="form-label">Tags</label>

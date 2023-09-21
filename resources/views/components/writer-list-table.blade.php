@@ -15,8 +15,8 @@
         <td>{{ $user->name}}</td>
         <td>{{ $user->email}}</td>
         <td>
-            <a href="{{route('admin.makeUserWriter', $user)}}" class="btn btn-primary">Permessi Writer</a>
-            <a href="{{route('writer.remove',$user)}}" class="btn btn-primary">Rimuovi permessi Scrittore</a>
+            <a href="{{route('admin.makeUserWriter', $user)}}" class="btn btn-dark"  style="color:yellow">Permessi Writer</a>
+            <a href="{{route('writer.remove',$user)}}" class="btn btn-dark"  style="color:yellow">Rimuovi permessi Scrittore</a>
         </td>
         <td>
             @if($user->is_writer==true)

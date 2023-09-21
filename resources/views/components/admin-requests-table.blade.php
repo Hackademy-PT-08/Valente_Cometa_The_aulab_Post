@@ -18,7 +18,7 @@
         <td>{{ $user->name}}</td>
         <td>{{ $user->email}}</td>
         <td>
-            <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-primary">Permessi Admin</a>
+            <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-dark"style="color:yellow">Permessi Admin</a>
             
         </td>
         </tr>

@@ -1,7 +1,7 @@
  
 
 <!-- Footer -->
-<footer class="bg-dark text-center text-warning">
+<footer class="bg-dark text-center text-warning ">
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Social media -->

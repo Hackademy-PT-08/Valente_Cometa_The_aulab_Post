@@ -16,8 +16,8 @@
         <td>{{ $user->email}}</td>
 
         <td>
-            <a href="{{route('admin.makeUserRevisor', $user)}}" class="btn btn-primary">Permessi Revisor</a>
-            <a href="{{route('revisor.remove',$user)}}" class="btn btn-primary">Rimuovi permessi Revisor</a>
+            <a href="{{route('admin.makeUserRevisor', $user)}}" class="btn btn-dark" style="color:yellow">Permessi Revisor</a>
+            <a href="{{route('revisor.remove',$user)}}" class="btn btn-dark" style="color:yellow">Rimuovi permessi Revisor</a>
         </td>
         <td>
             @if($user->is_revisor==true)

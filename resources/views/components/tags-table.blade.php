@@ -30,8 +30,8 @@
     @csrf
     
     <div class="d-flex d-inline">
-    <input type="text" class="form-control" placeolder="nuovo nome" name="name">
-                    <button class="btn btn-info mx-5" type="submit">Salva</button>
+    <input type="text" class="form-control" placeolder="nuovo nome" name="name" required>
+                    <button class="btn btn-dark mx-5" type="submit" style="color:yellow">Salva</button>
     </div>
 </form>
 
@@ -40,7 +40,7 @@
                 <form action="{{route('tag.delete', $tag)}}" class="w-50" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Elimina</button>
+                    <button class="btn btn-dark" type="submit"  style="color:yellow">Elimina</button>
                    
                 </form>
            

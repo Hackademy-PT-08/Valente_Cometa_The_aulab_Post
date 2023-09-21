@@ -14,7 +14,7 @@
         <td>{{ $user->name}}</td>
         <td>{{ $user->email}}</td>
         <td>
-            <a href="{{route('admin.makeUserRevisor', $user)}}" class="btn btn-primary">Permessi Revisore</a>
+            <a href="{{route('admin.makeUserRevisor', $user)}}" class="btn btn-dark" style="color:yellow">Permessi Revisore</a>
         </td>
         </tr>
         @endforeach

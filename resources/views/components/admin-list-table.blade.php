@@ -15,8 +15,8 @@
         <td>{{ $user->name}}</td>
         <td>{{ $user->email}}</td>
         <td>
-            <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-primary">Permessi Admin</a>
-            <a href="{{route('admin.remove',$user)}}" class="btn btn-primary">Rimuovi permessi Admin</a>
+            <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-dark"  style="color:yellow">Permessi Admin</a>
+            <a href="{{route('admin.remove',$user)}}" class="btn btn-dark"  style="color:yellow">Rimuovi permessi Admin</a>
         </td>
         <td>
             @if($user->is_admin==true)

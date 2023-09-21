@@ -18,7 +18,7 @@
             <td>{{ $article->user->name}}</td>
             <td>{{ $article->created_at->format('d-m-y')}}</td>
             <td>
-                <a href="{{route('revisor.detail', $article)}}" class="btn btn-primary">Leggi</a>
+                <a href="{{route('revisor.detail', $article)}}" class="btn btn-dark" style="color:yellow">Leggi</a>
             </td>    
         </tr>
     @endforeach
