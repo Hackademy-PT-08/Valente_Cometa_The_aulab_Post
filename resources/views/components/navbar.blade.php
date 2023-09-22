@@ -37,7 +37,7 @@
             <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Area revisore</a></li>
             @endauth
             @if(Auth::user() && Auth::user()->is_writer)
-            <li><a class="nav-link" href="{{route('article.dashboard')}}">Area Autore</a></li>
+            <li><a class="dropdown-item" href="{{route('article.dashboard')}}">Area Autore</a></li>
             @endif
              
             

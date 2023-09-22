@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center"style="color:yellow"> {{$article->title}}</h5>
                         <p class="card-text text-center"style="color:yellow">{{$article->description}}</p>
-                        <a href="{{route('article.show', $article)}}" class="btn btn-warning" id="text" ><span>Leggi</span></a>
+                        <a href="{{route('articles.show', $article)}}" class="btn btn-warning" id="text" ><span>Leggi</span></a>
                     </div>
 
 

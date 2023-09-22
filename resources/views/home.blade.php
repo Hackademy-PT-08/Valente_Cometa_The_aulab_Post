@@ -6,7 +6,7 @@
     
         <div class="col-12">
             <header>
-                <img src="{{asset('/immagini/1.png')}}" alt="" class="banner">
+                <img src="{{asset('/immagini/ban2.png')}}" alt="" class="banner">
             </header>
         </div>
     
@@ -23,12 +23,12 @@
         </div>
     </div>
    </div>
-    <div class="row" >
-        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 ">
-            <div class="row my-4">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6" >
+            <div class="row">
                 @foreach($articles as $article)
-                <div class="col-4 text-center mb-4">
-                    <div class="card ">
+                <div class="col-xs-12 col-sm-12 col-md-7 col-xl-4 mb-3">
+                    <div class="card mx-3">
                         <img src="{{asset('storage/'.$article->img)}}" class="card-img-top" alt="{{$article->title}}">
                         <div class="card-body bg-dark">
                             <h5 class="card-title" style="color:yellow"> {{$article->title}}</h5>
@@ -43,9 +43,12 @@
                 </div>
                 @endforeach
             </div>
+
+            
+
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6">
-            <img src="{{asset('/immagini/0.png')}}" alt="" id="g">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6 " style="">
+            <img src="{{asset('/immagini/0.png')}}" alt="" id="responsive" >
         </div>
     </div>
     
