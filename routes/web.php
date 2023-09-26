@@ -20,7 +20,7 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'home'])->name ('home');
 Route::get('/articles/create', [ArticleController::class, 'create'])->name ('articles.create');
 Route::post('/article/store', [ArticleController::class,'store'])->name('articles.store');
-Route::get('/articles/{article}/show',[ArticleController::class,'show'])->name('articles.show');
+
 Route::get('/articles/{category}/index',[ArticleController::class,'articlesForCategory'])->name('articles.category');
 Route::get('/work-with-as', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request',[PublicController::class,'sendRoleRequest'])->name('user.role.request');
@@ -63,6 +63,7 @@ Route::middleware('revisor')->group(function(){
 });
 
 Route::get('/article/search', [PublicController::class, 'searchArticle'])->name('search.articles');
+Route::get('/article/{article:slug}/show',[ArticleController::class,'show'])->name('articles.show');
 
 
 

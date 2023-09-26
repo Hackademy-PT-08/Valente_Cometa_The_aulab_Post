@@ -43,16 +43,17 @@
             
           </ul>
       </ul>
+      @guest
+        <a href="{{route('register')}}" class="btn btn-outline-dark mx-5 my-2">Registrati</a>
+        <a href="{{route('login')}}" class="btn btn-outline-dark mx-5 my-2">Login</a>
+     @endguest
+
       <form action="{{route('search.articles')}}" method="get" class="d-flex mx-5">
 <input type="text" name="key" class="form-control me-2" placeholder="Cerca">
 <button class="btn btn-outline-dark btn-floating " type="submit">Cerca</button>
 
 </form>
-      @guest
-        <a href="{{route('register')}}" class="btn btn-outline-dark mx-5">Registrati</a>
-        <a href="{{route('login')}}" class="btn btn-outline-dark mx-5">Login</a>
-     @endguest
-
+      
 
         @auth
 

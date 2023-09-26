@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,6 +44,7 @@ class ArticleController extends Controller
                 'img'=>$imagename,
                 'user_id'=>auth()->user()->id,
                 'category_id'=>$request->input('category_id'),
+                'slug'=>Str::slug($request->title),
 
              ]
 
@@ -90,6 +92,7 @@ class ArticleController extends Controller
                     'body'=>$request->input('body'),
                     'img'=>$request->file('img')->store("public/img"),
                     'category_id'=>$request->input('cetegory_id'),
+                    'slug'=>Str::slug($request->title),
                 ]
           
             );

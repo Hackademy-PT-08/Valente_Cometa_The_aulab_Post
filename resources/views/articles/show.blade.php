@@ -3,7 +3,7 @@
     <div class="row mt-5">
         
         </div>
-        <div class="col-6 offset-3">
+        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-6  col-xl-6 offset-xl-3">
         <img src="{{Storage::url($article->img)}}" alt="" class="img-fluid">
         </div>
     </div>

@@ -14,7 +14,7 @@ class Article extends Model
 
     use Searchable;
     protected $fillable = [
-        'title','description','body','img','user_id','category_id'];
+        'title','description','body','img','user_id','category_id','slug'];
     
      public function user()
      {
@@ -41,6 +41,17 @@ class Article extends Model
      public function tags()
      {
       return $this->belongsToMany(Tag::class);
+     }
+
+     public function getRouteKeyName()
+     {
+      return 'slug';
+     }
+
+     public function readDuration(){
+      $totalWords = str_word_count($this->body);
+      $minutesToRead = round($totalWords/200);
+      return intval ($minutesToRead);
      }
 
 }
