@@ -53,6 +53,20 @@ return [
 'cand'=>'Send your CV',
 'welcome'=>'Welcome back',
 'out'=>'Logout',
+'personal'=>'Personal Area',
+'area'=>'Revisor Area',
+'area1'=>'Writer Area',
+'pubblica'=>'PUBLISH ARTICLE',
+'all'=>'All your articles',
+'not'=>'You have not published any articles',
+'first'=>'Write your first article',
+'crea'=>'CREATE YOUR ARTICLE',
+'rew'=>'Article review',
+
+
+
+
+
 
 
 

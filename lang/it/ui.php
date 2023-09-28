@@ -52,6 +52,15 @@ return [
 'cand'=>'Invia il tuo cv',
 'welcome'=>'Bentornato',
 'out'=>'Esci',
+'personal'=>'Area Personale',
+'area'=>'Area Revisore',
+'area1'=>' Area Scrittore',
+'pubblica'=>'PUBBLICA ARTICOLO',
+'all'=>'Tutti i tuoi articoli',
+'not'=>'Non hai pubblicato nessun articolo',
+'first'=>'Scrivi il tuo primo articolo',
+'crea'=>'CREA ARTICOLO',
+'rew'=>'Revisione articolo',
 
 
 ];

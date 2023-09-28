@@ -85,12 +85,16 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     { 
         if($request->has('img')){
+            $img_id= uniqid();
+        $imagename = 'img-articolo'. $img_id.'.'.'jpg';
+            $image = $request->file('img')->storeAs("public",$imagename);
             $article->update(
+
                 [
                     'title'=>$request->input('title'),
                     'description'=>$request->input('description'),
                     'body'=>$request->input('body'),
-                    'img'=>$request->file('img')->store("public/img"),
+                    'img'=>$imagename,
                     'category_id'=>$request->input('category_id'),
                     'slug'=>Str::slug($request->title),
                 ]

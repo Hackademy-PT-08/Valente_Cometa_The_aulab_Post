@@ -2,7 +2,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6">
-                <h1>Revsione Articolo</h1>
+                <h1> {{__('ui.rew')}} </h1>
             </div>
         </div>
         <div class="row my-5">

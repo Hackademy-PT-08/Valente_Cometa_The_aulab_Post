@@ -162,9 +162,14 @@ article h2 {
 
 #testo{
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color: rgb(228, 7, 7);
     text-transform: uppercase;
+   
+    
+    
+
 }
+
 
 #corpo{
     line-height: 30px;

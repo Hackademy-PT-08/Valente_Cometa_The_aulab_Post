@@ -26,14 +26,14 @@
     </div>
     <div class="mb-3">
         <label class="form-label">{{__('ui.body')}}</label>
-        <textarea name="body" id="" cols="30" rows="10" class="form-control" >
+        <textarea name="body" id="" cols="30" rows="10" class="form-control" required >
         </textarea>
     </div>
     <button type="submit" class="btn btn-dark" style="color:yellow">Submit</button>
 
     <div class="mb-3">
         <label class="form-label">{{__('ui.tag')}}</label>
-        <select name="tags[]" class="form-control" multiple>
+        <select name="tags[]" class="form-control" required multiple>
             @foreach($tags as $tag)
             <option value="{{$tag->id}}">{{$tag->name}}</option>
             @endforeach

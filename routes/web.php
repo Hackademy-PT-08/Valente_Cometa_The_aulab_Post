@@ -22,7 +22,7 @@ Route::get('/articles/create', [ArticleController::class, 'create'])->name ('art
 Route::post('/article/store', [ArticleController::class,'store'])->name('articles.store');
 
 Route::get('/articles/{category}/index',[ArticleController::class,'articlesForCategory'])->name('articles.category');
-Route::get('/work-with-as', [PublicController::class, 'workWithUs'])->name('work.with.us');
+Route::get('/work-with-as', [PublicController::class, 'workWithUs'])->name('work.with.us')->middleware('auth');
 Route::post('/user/send-role-request',[PublicController::class,'sendRoleRequest'])->name('user.role.request');
 
 route::middleware('admin')->group(function(){
