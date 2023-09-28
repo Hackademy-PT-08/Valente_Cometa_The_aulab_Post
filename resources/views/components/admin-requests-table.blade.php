@@ -6,9 +6,9 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Action</th>
+            <th scope="col">{{__('ui.name')}}</th>
+            <th scope="col">{{__('ui.email')}}</th>
+            <th scope="col">{{__('ui.action')}}</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
         <td>{{ $user->name}}</td>
         <td>{{ $user->email}}</td>
         <td>
-            <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-dark"style="color:yellow">Permessi Admin</a>
+            <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-dark"style="color:yellow"> {{__('ui.permission')}} </a>
             
         </td>
         </tr>

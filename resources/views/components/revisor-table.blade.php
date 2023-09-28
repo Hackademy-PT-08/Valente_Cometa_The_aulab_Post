@@ -2,11 +2,11 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Titolo</th>
-            <th scope="col">Categoria</th>
-            <th scope="col">Scritto da</th>
-            <th scope="col">Scritto il</th>
-            <th scope="col">Leggi</th>
+            <th scope="col">{{__('ui.title')}}</th>
+            <th scope="col">{{__('ui.category')}}</th>
+            <th scope="col">{{__('ui.post')}}</th>
+            <th scope="col">{{__('ui.posted')}}</th>
+            <th scope="col">{{__('ui.btnLeggi')}}</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
             <td>{{ $article->user->name}}</td>
             <td>{{ $article->created_at->format('d-m-y')}}</td>
             <td>
-                <a href="{{route('revisor.detail', $article)}}" class="btn btn-dark" style="color:yellow">Leggi</a>
+                <a href="{{route('revisor.detail', $article)}}" class="btn btn-dark" style="color:yellow">{{__('ui.btnleggi')}}</a>
             </td>    
         </tr>
     @endforeach

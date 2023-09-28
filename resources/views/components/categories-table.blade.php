@@ -2,10 +2,10 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Categoria</th>
-            <th scope="col">Articoli</th>
-            <th scope="col">Modifica</th>
-            <th scope="col">elimina</th>
+            <th scope="col"> {{__('ui.category')}} </th>
+            <th scope="col"> {{__('ui.article')}} </th>
+            <th scope="col"> {{__('ui.edit')}} </th>
+            <th scope="col"> {{__('ui.delete')}} </th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
                 <form action="{{route('category.edit', $category)}}" method="post" class="w-50">
                     @csrf
                     <input type="text" class="form-control" placeolder="nuovo nome" name="name">
-                    <button class="btn btn-dark" type="submit"  style="color:yellow">Salva</button>
+                    <button class="btn btn-dark" type="submit"  style="color:yellow"> {{__('ui.save')}} </button>
                 </form>
            
             </td>
@@ -31,7 +31,7 @@
                 <form action="{{route('category.delete', $category)}}" class="w-50" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-dark" type="submit"  style="color:yellow">Elimina</button>
+                    <button class="btn btn-dark" type="submit"  style="color:yellow"> {{__('ui.delete')}} </button>
                    
                 </form>
            

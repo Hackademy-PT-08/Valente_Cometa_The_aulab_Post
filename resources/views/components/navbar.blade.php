@@ -33,24 +33,35 @@
           <ul class="dropdown-menu btn btn-dark" >
             <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
             @auth
+            @if (Auth::user()->is_admin)
             <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Area personale</a></li>
+            @endif
+            @if (Auth::user()->is_revisor)
             <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Area revisore</a></li>
+            @endif
             @endauth
             @if(Auth::user() && Auth::user()->is_writer)
             <li><a class="dropdown-item" href="{{route('article.dashboard')}}">Area Autore</a></li>
             @endif
              
-            
           </ul>
-      </ul>
+          <li class="nav-item mt-1">
+          <x-_locale lang='it' nation='it'/>
+         </li>
+
+         
+         <li class="nav-item mt-1">
+          <x-_locale lang='en' nation='gb'/>
+         </li>
+         </ul>
       @guest
-        <a href="{{route('register')}}" class="btn btn-outline-dark mx-5 my-2">Registrati</a>
-        <a href="{{route('login')}}" class="btn btn-outline-dark mx-5 my-2">Login</a>
+        <a href="{{route('register')}}" class="btn btn-outline-dark mx-5 my-2">{{__('ui.register')}} </a>
+        <a href="{{route('login')}}" class="btn btn-outline-dark  ">{{__('ui.login')}} </a>
      @endguest
 
       <form action="{{route('search.articles')}}" method="get" class="d-flex mx-5">
-<input type="text" name="key" class="form-control me-2" placeholder="Cerca">
-<button class="btn btn-outline-dark btn-floating " type="submit">Cerca</button>
+<input type="text" name="key" class="form-control me-2" placeholder="{{__('ui.find')}}">
+<button class="btn btn-outline-dark btn-floating " type="submit">{{__('ui.find')}}</button>
 
 </form>
       
@@ -59,13 +70,13 @@
 
 
     
-    <button type="button" class="btn btn-dark "><a class="nav-link"> Bentornato {{Auth::user()->name}}</a></button>
+    <button type="button" class="btn btn-dark "><a class="nav-link"> {{__('ui.welcome')}} {{Auth::user()->name}}</a></button>
 
     
 
 
-<form method="POST" action="{{route('logout')}}" style="display-none" id="form-logout">
-<input type="submit" value="logout" class="btn btn-outline-dark mx-5">
+<form method="POST" action="{{route('logout')}}" style="display-none" id="form-{{__('ui.out')}}">
+<input type="submit" value="{{__('ui.out')}}" class="btn btn-outline-dark mx-5">
 
 @csrf
 </form>

@@ -2,11 +2,11 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Titolo</th>
-            <th scope="col">Creato il</th>
-            <th scope="col">Status</th>
-            <th scope="col">Modifica</th>
-            <th scope="col">Elimina</th>
+            <th scope="col"> {{__('ui.title')}} </th>
+            <th scope="col"> {{__('ui.created')}} </th>
+            <th scope="col"> {{__('ui.status')}} </th>
+            <th scope="col"> {{__('ui.edit')}} </th>
+            <th scope="col"> {{__('ui.delete')}} </th>
         </tr>
     </thead>
     <tbody>
@@ -16,16 +16,16 @@
             <td>{{$article->title}}</td>
             <td>{{$article->created_at->format("d/m/y")}}</td>
             <td>
-            {{$article->is_accepted? "Pubblicato": "Non pubblicato"}}
+            {{$article->is_accepted? " Pubblicato ": " non pubblicato "}}
             </td>
             <td>
-                <a href="{{route('article.edit',$article)}}" class="btn btn-dark" style="color:yellow">Modifica</a>
+                <a href="{{route('article.edit',$article)}}" class="btn btn-dark" style="color:yellow"> {{__('ui.edit')}} </a>
             </td>
             <td>
                 <form action="{{route('article.delete',$article)}}" class="w-50" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-dark" type="submit" style="color:yellow">Elimina</button>
+                    <button class="btn btn-dark" type="submit" style="color:yellow"> {{__('ui.delete')}} </button>
                 </form>
             </td>
         </tr>

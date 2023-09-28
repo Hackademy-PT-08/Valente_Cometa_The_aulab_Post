@@ -32,7 +32,7 @@ class ArticleController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    { 
         $img_id= uniqid();
         $imagename = 'img-articolo'. $img_id.'.'.'jpg';
         $article=Article::create(
@@ -83,7 +83,7 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, Article $article)
-    {
+    { 
         if($request->has('img')){
             $article->update(
                 [
@@ -91,7 +91,7 @@ class ArticleController extends Controller
                     'description'=>$request->input('description'),
                     'body'=>$request->input('body'),
                     'img'=>$request->file('img')->store("public/img"),
-                    'category_id'=>$request->input('cetegory_id'),
+                    'category_id'=>$request->input('category_id'),
                     'slug'=>Str::slug($request->title),
                 ]
           
@@ -103,7 +103,7 @@ class ArticleController extends Controller
                     'title'=>$request->input('title'),
                     'description'=>$request->input('description'),
                     'body'=>$request->input('body'),
-                    'category_id'=>$request->input('cetegory_id'),
+                    'category_id'=>$request->input('category_id'),
                 ]
 
             );               

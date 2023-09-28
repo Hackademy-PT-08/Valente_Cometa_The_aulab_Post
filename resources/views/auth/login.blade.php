@@ -10,7 +10,7 @@
     <div class="row  mt-5 mx-5">
         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-9 mb-3">
             <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">{{__('ui.email')}}</label>
             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="EmailHelp">
         </div>
         </div>
@@ -28,7 +28,7 @@
      
        
 <div class="container mx-1">
-    <button type="submit" class="btn btn-dark mx-5">Submit</button>
+    <button type="submit" class="btn btn-dark mx-5">{{__('ui.submit')}}</button>
 </div>
    
 

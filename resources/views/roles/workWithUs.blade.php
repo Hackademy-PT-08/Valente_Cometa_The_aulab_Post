@@ -2,7 +2,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6">
-                <h1>Lavora con noi</h1>
+                <h1> {{__('ui.work')}} </h1>
             </div>
         </div>
     </div>
@@ -10,15 +10,15 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6">
-                <h3>Lavora come scrittore</h3>
+                <h3>{{__('ui.writer')}}</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dicta id ullam mollitia soluta
                     voluptate aut reiciendis unde veniam et.</p>
 
-                <h3>Lavora come revisore</h3>
+                <h3>{{__('ui.revisor')}}</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dicta id ullam mollitia soluta
                     voluptate aut reiciendis unde veniam et.</p>
 
-                <h3>Lavora come amministratore</h3>
+                <h3>{{__('ui.amn')}}</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dicta id ullam mollitia soluta
                     voluptate aut reiciendis unde veniam et.</p>
             </div>
@@ -28,25 +28,25 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label class="form-label h3"> Per quale posizione vuoi candidarti</label>
+                        <label class="form-label h3"> {{__('ui.position')}}</label>
                         <select class="form-control" name="role" id="">
-                            <option value="admin">Amministratore</option>
-                            <option value="revisor">Revisore</option>
-                            <option value="writer">Scrittore</option>
+                            <option value="admin">{{__('ui.amministratore')}}</option>
+                            <option value="revisor">{{__('ui.revisore')}}</option>
+                            <option value="writer">{{__('ui.scrittore')}}</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label h5"> Inviaci la tua E-mail</label>
+                        <label class="form-label h5"> {{__('ui.send')}}</label>
                         <input type="email" class="form-control" name="email" @auth value="{{Auth::user()->email}}"
                             @endauth>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label h5"> Perche vuoi lavorare con noi?</label>
+                        <label class="form-label h5"> {{__('ui.us')}}</label>
                         <textarea name="presentation" class="form-control" id="" cols="30" rows="10"></textarea>
                     </div>
 
-                    <button class="btn btn-dark" style="color:yellow" type="submit">Invia la tua candidatura</button>
+                    <button class="btn btn-dark" style="color:yellow" type="submit">{{__('ui.cand')}}</button>
 
                 </form>
 

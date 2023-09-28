@@ -64,6 +64,7 @@ Route::middleware('revisor')->group(function(){
 
 Route::get('/article/search', [PublicController::class, 'searchArticle'])->name('search.articles');
 Route::get('/article/{article:slug}/show',[ArticleController::class,'show'])->name('articles.show');
+Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name('set_language_locale');
 
 
 

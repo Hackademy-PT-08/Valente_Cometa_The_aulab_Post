@@ -1,25 +1,25 @@
 <x-layout>
-
+<div class="container">
     <div class="row my-4">
-        <div class=" col-xs-12 col-sm-12 col-md-12 col-xl-6 ">
+        <div class=" col-xs-10 col-sm-12 col-md-12 col-xl-6">
         <form method="post" action="{{ route('register') }}">
 
 @csrf
 
 
 <div class="row  mt-5 ">
-    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-1 col-xl-9 ">
+    <div class="col-xs-8 col-sm-8 col-md-8 offset-md-1 col-xl-9 ">
         <div>
-            <label class="form-label">Username</label>
+            <label class="form-label">{{__('ui.username')}}</label>
             <input type="text" name="name" class="form-control">
         </div>
     </div>
 </div>
 
 <div class="row  mt-5 ">
-    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-1 col-xl-9 ">
+    <div class="col-xs-8 col-sm-8 col-md-8 offset-md-1 col-xl-9 ">
         <div class="">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">{{__('ui.email')}}</label>
             <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                 aria_describedby="emailHelp">
 
@@ -28,7 +28,7 @@
 </div>
 
 <div class="row  mt-5 ">
-    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-1 col-xl-9 ">
+    <div class="col-xs-8 col-sm-12 col-md-8 offset-md-1 col-xl-9 ">
 
         <div class="">
 
@@ -39,16 +39,16 @@
     </div>
 </div>
 <div class="row  my-3 ">
-    <div class="col-xs-12 col-sm-12 col-md-8 offset-md-1 col-xl-9 ">
+    <div class="col-xs-8 col-sm-12 col-md-8 offset-md-1 col-xl-9 ">
         <div class="">
-            <label for="exampleInputPassword1" class="form-label">Password confirmation</label>
+            <label for="exampleInputPassword1" class="form-label">{{__('ui.conf')}}</label>
             <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1">
 
         </div>
     </div>
 </div>
     <div class="container mx-5">
-        <button type="submit" class="btn btn-dark  " style="color:yellow" >Submit</button>
+        <button type="submit" class="btn btn-dark  " style="color:yellow" >{{__('ui.submit')}}</button>
     </div>
 
     
@@ -63,7 +63,7 @@
     </div>
 
     
-    
+    </div>
 
 
    

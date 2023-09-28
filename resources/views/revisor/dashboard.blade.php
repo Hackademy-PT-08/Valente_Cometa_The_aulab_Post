@@ -9,7 +9,7 @@
 <div class="container ">
     <div class="row">
         <div class="col-12 md-6">
-            <h1>Bentornato {{Auth::user()->name}}</h1>
+            <h1>{{__('ui.welcome')}} {{Auth::user()->name}}</h1>
         </div>
     </div>
     <div class="row">
@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <div class="alert alert-danger text-center" style="margin-top:40vh">
-            Non sei autorizzato, solo i revisori possono accedere.
+           {{__('ui.notaut')}}
         </div>
         </div>
     </div>

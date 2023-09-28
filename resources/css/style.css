@@ -159,3 +159,30 @@ article h2 {
 #responsive{
     margin-bottom: 100%;
 }
+
+#testo{
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-transform: uppercase;
+}
+
+#corpo{
+    line-height: 30px;
+    font-family:sans-serif;
+   padding:15px;
+   font-size: 19px;
+   text-align: justify;
+  
+   
+}
+
+#descr{
+    text-transform: uppercase;
+    
+}
+
+.nav-item::marker{
+
+   
+    content: '';
+}

@@ -19,7 +19,7 @@ return new class extends Migration
         });
 
         $names =[
-            'politica','attualità','sport','tecnlogia','gossip','auto-e-moto','travel','food'
+            'Politica','Attualità','Sport','Tech','Gossip','Auto-e-Moto','Travel','Food'
         ];
         foreach($names as $name)
         {

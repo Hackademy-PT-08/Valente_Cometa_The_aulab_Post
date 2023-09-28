@@ -3,10 +3,10 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Tag</th>
-            <th scope="col">Articoli</th>
-            <th scope="col">Modifica</th>
-            <th scope="col">Elimina</th>
+            <th scope="col">{{__('ui.tag')}}</th>
+            <th scope="col">{{__('ui.article')}}</th>
+            <th scope="col">{{__('ui.edit')}}</th>
+            <th scope="col">{{__('ui.delete')}}</th>
             
         </tr>
     </thead>
@@ -30,8 +30,8 @@
     @csrf
     
     <div class="d-flex d-inline">
-    <input type="text" class="form-control" placeolder="nuovo nome" name="name" required>
-                    <button class="btn btn-dark mx-5" type="submit" style="color:yellow">Salva</button>
+    <input type="text" class="form-control" placeolder="" name="name" required>
+                    <button class="btn btn-dark mx-5" type="submit" style="color:yellow">{{__('ui.save')}}</button>
     </div>
 </form>
 
@@ -40,7 +40,7 @@
                 <form action="{{route('tag.delete', $tag)}}" class="w-50" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-dark" type="submit"  style="color:yellow">Elimina</button>
+                    <button class="btn btn-dark" type="submit"  style="color:yellow">{{__('ui.delete')}}</button>
                    
                 </form>
            

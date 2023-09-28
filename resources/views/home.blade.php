@@ -33,18 +33,17 @@
                         <div class="card-body bg-dark">
                             <h5 class="card-title" style="color:yellow"> {{$article->title}}</h5>
                             <p class="card-text" style="color:yellow">{{substr($article->description,0,20)}}...</p>
-                            <span class="badge rounded-pill bg-danger mx-2"><a
+                            <span class="badge rounded-pill bg-danger mx-3 mb-2"><a
                                     href="{{route('articles.category',$article->category->id)}}" class="card-text;"
                                     style="text-decoration:none; color:black">{{$article->category->name}}</a></span> <br>
-                                    <span class="text-muted small fst-italic bg-warning" style="color:black">- Tempo di lettura {{$article->readDuration()}} min</span>
+                                    <span class="text-muted small fst-italic bg-warning" style="color:black">{{__('ui.allAnnouncements')}} {{$article->readDuration()}} min</span>
                                     <hr>
                                     <p class="small fst-italic text-capitalize bg-warning" >
                                         @foreach($article->tags as $tag)
                                         #{{$tag->name}}
                                         @endforeach
                                     </p>
-
-                            <a href="{{route('articles.show',$article->slug)}}" class="btn btn-warning">Leggi</a>
+                            <a href="{{route('articles.show',$article->slug)}}" class="btn btn-warning">{{__('ui.btnLeggi')}}</a>
                         </div>
                     </div>
                 </div>
